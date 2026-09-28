@@ -3,7 +3,7 @@
     {
       "id": "spudling",
       "name": "Spudling",
-      "status": "wip",
+      "status": "playable",
       "type": "web-demo",
       "url": "https://spudling.pages.dev/",
       "thumbnail": "thumbs/spudling.png",
@@ -23,7 +23,7 @@
     {
       "id": "flip",
       "name": "Flip the Number",
-      "status": "wip",
+      "status": "playable",
       "type": "web-demo",
       "url": "https://flip.artkayenoem.workers.dev/",
       "thumbnail": "thumbs/flip.png",
