@@ -4,16 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dominik's Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Unica+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="page-header">
-  <h1>Dominik's Projects</h1>
-  <p class="subtitle">A launcher for side projects and demos.</p>
+<header class="site-header">
+  <div class="header-inner">
+    <span class="logo">DOMINIK HILSE</span>
+    <a class="pill pill-dark" href="https://dominikhilse.github.io/portfolio/" target="_blank" rel="noopener">PORTFOLIO &#8599;</a>
+  </div>
 </header>
 
+<section class="hero">
+  <p class="eyebrow">SIDE PROJECTS</p>
+  <h1 class="hero-title">PROJECT PICKER</h1>
+  <p class="hero-subtitle">GAMES &middot; TOOLS &middot; EXPERIMENTS</p>
+  <p class="hero-desc">A personal launcher for demos and prototypes &mdash; friends and family welcome, no login required.</p>
+</section>
+
+<nav id="status-nav" class="status-nav" aria-label="Jump to section"></nav>
+
 <main id="app">
-  <p id="load-error" class="load-error" hidden>Couldn't load the project list — check manifest.json</p>
+  <p id="load-error" class="load-error" hidden>Couldn't load the project list &mdash; check manifest.json</p>
 </main>
 
 <div id="wip-modal" class="modal" hidden>
@@ -23,7 +37,7 @@
     <h2 id="wip-modal-title"></h2>
     <p id="wip-modal-summary"></p>
     <p id="wip-modal-note" class="modal-note"></p>
-    <a id="wip-modal-link" class="btn btn-primary" target="_blank" rel="noopener">Open demo</a>
+    <a id="wip-modal-link" class="pill pill-dark" target="_blank" rel="noopener">Open demo</a>
   </div>
 </div>
 

@@ -1,13 +1,14 @@
 const STATUS_ORDER = ["mvp", "playable", "wip", "archived"];
 const STATUS_LABELS = {
-  mvp: "MVP",
-  playable: "Playable",
-  wip: "WIP",
-  archived: "Archived",
+  mvp: "MVP.",
+  playable: "Playable.",
+  wip: "WIP.",
+  archived: "Archived.",
 };
 
 const appEl = document.getElementById("app");
 const loadErrorEl = document.getElementById("load-error");
+const statusNavEl = document.getElementById("status-nav");
 
 const modalEl = document.getElementById("wip-modal");
 const modalTitleEl = document.getElementById("wip-modal-title");
@@ -138,6 +139,7 @@ document.addEventListener("keydown", (event) => {
 });
 
 function renderSection(status, projects) {
+  const sectionId = `section-${status}`;
   const grid = document.createElement("div");
   grid.className = "card-grid";
   projects.forEach((project) => {
@@ -147,20 +149,53 @@ function renderSection(status, projects) {
   if (status === "archived") {
     const details = document.createElement("details");
     details.className = "status-section";
+    details.id = sectionId;
+
     const summary = document.createElement("summary");
-    summary.textContent = STATUS_LABELS[status];
+    const summaryInner = document.createElement("div");
+    summaryInner.className = "status-section-inner";
+    const heading = document.createElement("h2");
+    heading.className = "section-heading";
+    heading.textContent = STATUS_LABELS[status];
+    summaryInner.appendChild(heading);
+    summary.appendChild(summaryInner);
     details.appendChild(summary);
-    details.appendChild(grid);
+
+    const gridWrap = document.createElement("div");
+    gridWrap.className = "status-section-inner";
+    gridWrap.appendChild(grid);
+    details.appendChild(gridWrap);
+
     return details;
   }
 
   const section = document.createElement("section");
   section.className = "status-section";
+  section.id = sectionId;
+
+  const inner = document.createElement("div");
+  inner.className = "status-section-inner";
   const heading = document.createElement("h2");
+  heading.className = "section-heading";
   heading.textContent = STATUS_LABELS[status];
-  section.appendChild(heading);
-  section.appendChild(grid);
+  inner.appendChild(heading);
+  inner.appendChild(grid);
+  section.appendChild(inner);
+
   return section;
+}
+
+function renderStatusNav(presentStatuses) {
+  if (presentStatuses.length === 0) return;
+  const inner = document.createElement("div");
+  inner.className = "status-nav-inner";
+  presentStatuses.forEach((status) => {
+    const link = document.createElement("a");
+    link.href = `#section-${status}`;
+    link.textContent = STATUS_LABELS[status].replace(/\.$/, "");
+    inner.appendChild(link);
+  });
+  statusNavEl.appendChild(inner);
 }
 
 function render(manifest) {
@@ -172,11 +207,11 @@ function render(manifest) {
     byStatus[status].push(project);
   });
 
-  STATUS_ORDER.forEach((status) => {
-    const group = byStatus[status];
-    if (group && group.length > 0) {
-      appEl.appendChild(renderSection(status, group));
-    }
+  const presentStatuses = STATUS_ORDER.filter((status) => byStatus[status] && byStatus[status].length > 0);
+  renderStatusNav(presentStatuses);
+
+  presentStatuses.forEach((status) => {
+    appEl.appendChild(renderSection(status, byStatus[status]));
   });
 }
 
