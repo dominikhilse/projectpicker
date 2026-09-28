@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "id": "spudling",
+      "name": "Spudling",
+      "status": "wip",
+      "type": "web-demo",
+      "url": "https://spudling.pages.dev/",
+      "thumbnail": "thumbs/spudling.png",
+      "summary": "TODO (Dominik): one-line description.",
+      "note": "TODO (Dominik): optional caveat shown in the WIP detail view, or leave empty."
+    },
+    {
+      "id": "solitaire-connection",
+      "name": "Solitaire Connection",
+      "status": "wip",
+      "type": "web-demo",
+      "url": "https://solitaireconnection.artkayenoem.workers.dev/",
+      "thumbnail": "thumbs/solitaire-connection.png",
+      "summary": "TODO (Dominik): one-line description.",
+      "note": "TODO (Dominik): optional caveat shown in the WIP detail view, or leave empty."
+    },
+    {
+      "id": "flip",
+      "name": "Flip the Number",
+      "status": "wip",
+      "type": "web-demo",
+      "url": "https://flip.artkayenoem.workers.dev/",
+      "thumbnail": "thumbs/flip.png",
+      "summary": "TODO (Dominik): one-line description.",
+      "note": ""
+    }
+  ]
+}
