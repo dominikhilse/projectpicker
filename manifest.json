@@ -16,7 +16,7 @@
       "status": "wip",
       "type": "web-demo",
       "url": "https://solitaireconnection.artkayenoem.workers.dev/",
-      "thumbnail": "thumbs/solitaire-connection.png",
+      "thumbnail": "thumbs/marketing-solitaireconnection-644.png",
       "summary": "TODO (Dominik): one-line description.",
       "note": "TODO (Dominik): optional caveat shown in the WIP detail view, or leave empty."
     },
@@ -26,7 +26,7 @@
       "status": "playable",
       "type": "web-demo",
       "url": "https://flip.artkayenoem.workers.dev/",
-      "thumbnail": "thumbs/flip.png",
+      "thumbnail": "thumbs/marketing-flip-644.png",
       "summary": "TODO (Dominik): one-line description.",
       "note": ""
     }
