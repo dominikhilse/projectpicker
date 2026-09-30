@@ -17,7 +17,7 @@
       "type": "web-demo",
       "url": "https://solitaireconnection.artkayenoem.workers.dev/",
       "thumbnail": "thumbs/marketing-solitaireconnection-644.png",
-      "summary": "TODO (Dominik): one-line description.",
+      "summary": "Explore and complete, score and compete! Connect three weekly modes to enter GOLD league.",
       "note": "TODO (Dominik): optional caveat shown in the WIP detail view, or leave empty."
     },
     {
@@ -27,7 +27,7 @@
       "type": "web-demo",
       "url": "https://flip.artkayenoem.workers.dev/",
       "thumbnail": "thumbs/marketing-flip-644.png",
-      "summary": "TODO (Dominik): one-line description.",
+      "summary": "A pass-and-play dice game for 2–12 kids or grown-ups. One table, one phone and no screens to hide behind.",
       "note": ""
     }
   ]
