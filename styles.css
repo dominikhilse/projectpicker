@@ -221,6 +221,11 @@ a {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   line-height: 1.1;
   margin: 0 0 2rem;
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .card-grid {
